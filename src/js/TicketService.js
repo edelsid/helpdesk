@@ -59,7 +59,7 @@ export default class TicketService {
       callback(null, xhr.response);
     };
 
-    xhr.open('POST', `hhttps://helpdesk-lwys.onrender.com?method=updateById&id=${id}`);
+    xhr.open('POST', `https://helpdesk-lwys.onrender.com?method=updateById&id=${id}`);
     xhr.send(data);
   }
 
