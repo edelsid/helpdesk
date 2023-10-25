@@ -1,0 +1,192 @@
+body {
+   background-color: #ededed;
+   padding: 10px;
+}
+
+.widget {
+   width: 100%;
+   height: min-content;
+   background-color: white;
+   background-size: 20px 20px;
+   background-image:
+      linear-gradient(to right, #ededed 1px, transparent 1px),
+      linear-gradient(to bottom, #ededed 1px, transparent 1px);
+   border: 1px solid #dcdcdc;
+   border-radius: 6px;
+   font-family: 'Arial';
+   font-size: 18px;
+   position: relative;
+}
+
+.header {
+   background-color: #dcdcdc;
+   border: 1px solid #dcdcdc;
+   border-radius: 6px 6px 0 0;
+   padding: 10px;
+   height: 10px;
+}
+
+.header_btns {
+   padding: 0;
+   margin: 0;
+   display: flex;
+   justify-content: flex-start;
+   list-style: none;
+}
+
+.header_btn {
+   margin-right: 10px;
+   height: 10px;
+   width: 10px;
+   border-radius: 50%;
+   background-color: #c9c8c9;
+}
+
+.ticket_area {
+   padding: 15px;
+}
+
+.menu {
+   display: flex;
+   justify-content: end;
+}
+
+.btn {
+   font-family: 'Arial';
+   font-size: 18px;
+   padding: 15px 20px 15px 20px;
+   background-color: white;
+   border: 1px solid black;
+   border-radius: 8px;
+}
+
+.tickets {
+   list-style: none;
+   margin: 20px 0 20px 0;
+   padding: 0;
+}
+
+.ticket {
+   background-color: white;
+   padding: 0.7em 1em 0.7em 1em;
+   border: 1px solid black;
+}
+
+.standard {
+   display: flex;
+   justify-content: space-between;
+   position: relative;
+}
+
+.info {
+   align-self: center;
+}
+
+.short_desk {
+   width: 70%;
+}
+
+.date {
+   width: 15%;
+}
+
+.btn_dec {
+   align-self: center;
+   height: 30px;
+   width: 30px;
+   border: 1px solid black;
+   border-radius: 50%;
+   font-size: 18px;
+   background-size: 50%;
+   background-repeat: no-repeat;
+   background-position: center center;
+   display: flex;
+   justify-content: center;
+}
+
+.ticket_btns {
+   display: flex;
+   justify-content: space-between;
+}
+
+.icon {
+   margin-left: 10px;
+}
+
+.check {
+   display: none;
+   height: 15px;
+   width: 15px;
+   align-self: center;
+   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAIGNIUk0AAHolAACAgwAA+f8AAIDoAABSCAABFVgAADqXAAAXb9daH5AAAACtSURBVHjapJMhDsJAEEVfQ1KFwaG4AhfAkaCRKARBVWO4ByRgEEDCUTCkB6giGExTW9xgRkw2G9op4+bnvczuZicREbpW4uSHwB4YAFePOAY+gAAX7VvVQiUBtp6JmREPHnFtxHsMSIElcAzyuRFroB+TN0ClUKHZyIgCzH4db2XAN/A0/a7N/W7BNAFengcqA3nikadGPHX5smeV0yawF8kKIAcejYvxz1Z9BwAZPDWaN9FxVwAAAABJRU5ErkJggg==);
+}
+
+.redact {
+   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAIGNIUk0AAHolAACAgwAA+f8AAIDoAABSCAABFVgAADqXAAAXb9daH5AAAADlSURBVHjapNOxK8VhFMbxz3sjRi4yKv+G/Bkms2wy2Zil2+0uKIMyyGJkUCZlvN1FNimTMjEwHstRt1/d3/3hTOc8ne9z3p56S0T4c1XgVxw35VpD8yMesIruby4/4yqlewT2xnET2d9iBgPcYSUN2tged7ngM4Efw7mcD0ZyCa/n4iHeMJ077dT362Do4CnT/sBU5QWdOhhOMrxzfGEy9fk02K2D4RJHmfZwBgs5r9XBLcxmf5YAbGV/iqVRcLW6Cb1nsH3sNIVhA9d4SaNeRCgRoZTSxGARm1jGTURclP/8qu8BAAhxdqkK0v4BAAAAAElFTkSuQmCC);
+}
+
+.remove {
+   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAACXBIWXMAABRYAAAUWAHwZPgTAAAAIGNIUk0AAHolAACAgwAA+f8AAIDoAABSCAABFVgAADqXAAAXb9daH5AAAAEpSURBVHjafNJPK4RRFAbw3zsz/g6JJrEwmA3JQtY+iC9h5VPIShQ7pcSIhSgrNQt/FrKytOBriHptzqvb2ztu3U733Oc597nPOdDEBkaQ+WfleS5wU5iDRfxgF+0AVK0MDewgxxqM4jAStxgvK4iCo7gK3CmGoIZpdOPiHZ1CQcQJ9OL+LYpnqaQWHgPwidkgdnAT+f3wqFb1pwlcBPAIY7iM83MQsyoXiziNB3xjC194xUDfbuR5/rexhIN48RjrKbFfRzIsJMTNiNf9/poSR8Ksom1NnMW5G9IrzWrhKYB3mEcdKziP/D1m/wqE/gb2AtDDcMnEucT1V7QLDxqJtA/US+YVcTIZlJeYb6uROImRyyrcTydtO53twWhFDVmZVOHNDJZR+x0A6BSJDlxzc9wAAAAASUVORK5CYII=);
+}
+
+.fullDesk {
+   position: relative;
+   width: 70%;
+   display: block;
+   margin: 30px 0 30px 0;
+}
+
+.form {
+   position: absolute;
+   content: '';
+   left: 0;
+   right: 0;
+   margin: auto;
+   width: 33%;
+   height: min-content;
+   background-color: white;
+   border: 1px solid black;
+   border-radius: 8px;
+   padding: 20px;
+}
+
+.form_name {
+   font-size: 18px;
+   text-align: center;
+   margin: 0;
+}
+
+.form_group {
+   width: 100%;
+   margin-top: 20px;
+}
+
+.area {
+   width: 97.5%;
+   border: 1px solid black;
+   padding: 1%;
+   margin-bottom: 10px;
+   resize: none;
+}
+
+.area_header {
+   display: block;
+   margin-bottom: 10px;
+}
+
+.short {
+   height: 2em;
+}
+
+.long {
+   height: 7em;
+}
+
+.form_btns {
+   display: flex;
+   justify-content: end;
+}
+
+.btn {
+   margin-left: 10px;
+}
